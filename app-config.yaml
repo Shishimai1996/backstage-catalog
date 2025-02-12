@@ -12,9 +12,11 @@ backend:
   reading:
     allow:
       - host: 'https://petstore.swagger.io'
+      - host: 'https://github.com'
   auth:
-    keys: []
+    # keys: []
       # - secret: ${BACKEND_SECRET}
+
   baseUrl: http://localhost:7007
   listen:
     port: 7007
@@ -40,11 +42,11 @@ backend:
   # workingDirectory: /tmp # Use this to configure a working directory for the scaffolder, defaults to the OS temp-dir
 
 integrations:
-  github:
-    - host: github.com
+  # github:
+    # - host: github.com
       # This is a Personal Access Token or PAT from GitHub. You can find out how to generate this token, and more information
       # about setting up the GitHub integration here: https://backstage.io/docs/integrations/github/locations#configuration
-      token: ${GITHUB_TOKEN}
+      # token: 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
     ### Example for how to add your GitHub Enterprise instance using the API:
     # - host: ghe.example.net
     #   apiBaseUrl: https://ghe.example.net/api/v3
