@@ -1,54 +1,85 @@
----
-# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-system
-apiVersion: backstage.io/v1alpha1
-kind: System
-metadata:
-  name: openapi
-spec:
-  owner: guests
----
-# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
-apiVersion: backstage.io/v1alpha1
-kind: Component
-metadata:
-  name: openapi-website
-spec:
-  type: website
-  lifecycle: experimental
-  owner: guests
-  system: openapi
-  providesApis: [mai-petstore-api]
----
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: mai-petstore-api
-  description: Swagger Petstore API
-  tags:
-    - rest
-    - openapi
+  name: artist-api
+  description: Retrieve artist details
 spec:
   type: openapi
   lifecycle: production
-  owner: guests
-  system: openapi
-  definition: 
-    $text: "https://petstore.swagger.io/v2/swagger.json"
-  # security:
-  #   - oauth2:
-  #       authorizationUrl: http://localhost:8080/realms/master/protocol/openid-connect/auth
-  #       tokenUrl: http://localhost:8080/realms/master/protocol/openid-connect/token
+  owner: artist-relations-team
+  system: artist-engagement-portal
+  definition: |
+    openapi: "3.0.0"
+    info:
+      version: 1.0.0
+      title: Artist API
+      license:
+        name: MIT
+    servers:
+      - url: http://artist.spotify.net/v1
+    paths:
+      /artists:
+        get:
+          summary: List all artists
+    ...
 
+# ---
+# # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-system
+# apiVersion: backstage.io/v1alpha1
+# kind: System
+# metadata:
+#   name: openapi
+# spec:
+#   owner: guests
+# ---
+# # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+# apiVersion: backstage.io/v1alpha1
+# kind: Component
+# metadata:
+#   name: openapi-website
+# spec:
+#   type: website
+#   lifecycle: experimental
+#   owner: guests
+#   system: openapi
+#   providesApis: [mai-petstore-api]
+# ---
 # apiVersion: backstage.io/v1alpha1
 # kind: API
 # metadata:
-#   name: petstore
-#   description: The Petstore API
+#   name: mai-petstore-api
+#   description: Swagger Petstore API
+#   tags:
+#     - rest
+#     - openapi
 # spec:
 #   type: openapi
 #   lifecycle: production
-#   owner: petstore@example.com
-#   definition:
-#     $text: https://petstore.swagger.io/v2/swagger.json
+#   owner: guests
+#   system: openapi
+#   definition: |
+#     openapi: "3.0.0"
+#     info: 
+#       version: 1.0.0
+#       title: openapi
+#       license: 
+#       servers: 
+#     $text: "https://petstore.swagger.io/v2/swagger.json"
+#   # security:
+#   #   - oauth2:
+#   #       authorizationUrl: http://localhost:8080/realms/master/protocol/openid-connect/auth
+#   #       tokenUrl: http://localhost:8080/realms/master/protocol/openid-connect/token
+
+# # apiVersion: backstage.io/v1alpha1
+# # kind: API
+# # metadata:
+# #   name: petstore
+# #   description: The Petstore API
+# # spec:
+# #   type: openapi
+# #   lifecycle: production
+# #   owner: petstore@example.com
+# #   definition:
+# #     $text: https://petstore.swagger.io/v2/swagger.json
 
 
