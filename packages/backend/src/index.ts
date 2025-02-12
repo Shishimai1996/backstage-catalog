@@ -52,4 +52,10 @@ backend.add(import('@backstage/plugin-search-backend-module-techdocs'));
 // kubernetes
 backend.add(import('@backstage/plugin-kubernetes-backend'));
 
+//catalog error
+backend.add(import('@backstage/plugin-events-backend'));
+
+//openapi
+backend.add(import('@backstage/plugin-catalog-backend-module-openapi'));
+
 backend.start();

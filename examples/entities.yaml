@@ -17,7 +17,7 @@ spec:
   lifecycle: experimental
   owner: guests
   system: examples
-  providesApis: [example-grpc-api]
+  providesApis: [example-grpc-api, mai-petstore-api]
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-api
 apiVersion: backstage.io/v1alpha1
@@ -39,3 +39,4 @@ spec:
     message ExampleMessage {
       string example = 1;
     };
+
