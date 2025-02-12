@@ -11,7 +11,7 @@ backend:
   # information on the format
   reading:
     allow:
-      - host: 'https://petstore.swagger.io'
+      - host: petstore.swagger.io
       - host: 'https://github.com'
   auth:
     # keys: []
