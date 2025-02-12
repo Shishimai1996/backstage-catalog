@@ -58,6 +58,7 @@ import {
   EntityKubernetesContent,
   isKubernetesAvailable,
 } from '@backstage/plugin-kubernetes';
+import { RamdomJokeCard } from '@internal/backstage-plugin-ramdom-joke';
 
 const techdocsContent = (
   <EntityTechdocsContent>
@@ -141,6 +142,9 @@ const overviewContent = (
     </Grid>
     <Grid item md={8} xs={12}>
       <EntityHasSubcomponentsCard variant="gridItem" />
+    </Grid>
+    <Grid item md={6}>
+      <RamdomJokeCard />
     </Grid>
   </Grid>
 );

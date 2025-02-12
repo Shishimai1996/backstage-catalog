@@ -1,0 +1,1 @@
+export { RamdomJokeCard } from './RamdomJokeCard';

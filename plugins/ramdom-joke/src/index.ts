@@ -1,1 +1,1 @@
-export { ramdomJokePlugin, RamdomJokePage } from './plugin';
+export { ramdomJokePlugin, RamdomJokePage, RamdomJokeCard } from './plugin';

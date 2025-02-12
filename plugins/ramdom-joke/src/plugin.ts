@@ -1,4 +1,5 @@
 import {
+  createComponentExtension,
   createPlugin,
   createRoutableExtension,
 } from '@backstage/core-plugin-api';
@@ -11,6 +12,15 @@ export const ramdomJokePlugin = createPlugin({
     root: rootRouteRef,
   },
 });
+
+export const RamdomJokeCard = ramdomJokePlugin.provide(
+  createComponentExtension({
+    component: {
+      lazy: () =>
+        import('./components/RamdomJokeCard').then(m => m.RamdomJokeCard),
+    },
+  }),
+);
 
 export const RamdomJokePage = ramdomJokePlugin.provide(
   createRoutableExtension({
