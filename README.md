@@ -74,7 +74,7 @@ https://backstage.io/docs/features/software-catalog/catalog-customization#pagina
 ### What is Entity
 https://backstage.io/docs/features/software-catalog/creating-the-catalog-graph#descriptor-components-used-to-build-the-catalog-graph
 
-# Add plugin
+### Add plugin
 https://backstage.io/docs/plugins/create-a-plugin#create-a-plugin
 
 https://backstage.io/docs/plugins/composability#extensions-from-a-plugins-point-of-view
