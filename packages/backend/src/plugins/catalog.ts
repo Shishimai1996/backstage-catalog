@@ -1,5 +1,5 @@
 import { PluginEnvironment } from '../types';
-import { createBackend } from '@backstage/plugin-catalog-backend/alpha'; // インポート方法の確認
+import createBackend from '@backstage/plugin-catalog-backend/alpha'; // インポート方法の確認
 
 export default async function createPlugin(env: PluginEnvironment) {
   const backend = createBackend; // createBackendをそのまま使用するのではなく
